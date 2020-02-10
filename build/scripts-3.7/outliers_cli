@@ -15,6 +15,6 @@ assert '.csv' in filename_out, "File extension must be .csv"
 
 if (len(arguments)==3):
 	threshold = float(arguments[2])
-    remove_outliers(filename_in, filename_out,threshold)
+	remove_outliers(filename_in, filename_out,threshold)
 else:
     remove_outliers_iqr(filename_in, filename_out)
