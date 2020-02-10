@@ -1,0 +1,20 @@
+#!python
+
+import sys
+from nishant_outlier_76 import remove_outliers,remove_outliers_iqr
+
+arguments = sys.argv[1:]
+assert len(arguments) >= 2 and len(arguments) < 4, "Wrong number of arguments provided"
+
+filename_in = arguments[0]
+filename_out = arguments[1]
+assert filename_in, "Input CSV filename must be provided"
+assert filename_out, "Output CSV filename must be provided"
+assert '.csv' in filename_in, "File extension must be .csv"
+assert '.csv' in filename_out, "File extension must be .csv"
+
+if (len(arguments)==3):
+	threshold = float(arguments[2])
+	remove_outliers(filename_in, filename_out,threshold)
+else:
+    remove_outliers_iqr(filename_in, filename_out)
