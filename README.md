@@ -23,7 +23,7 @@ First argument after outcli is the input csv filename from which the dataset is 
 
 ## Use in .py script
 ```
-from outliers_navkiran import remove_outliers
+from nishant_outlier_76 import remove_outliers
 remove_outliers('input.csv', 'output.csv')
 ```
 
