@@ -8,16 +8,16 @@ def remove_outliers(incsv_filename, outcsv_filename,threshold):
     shape=np.shape(data)
     rows=shape[0]
     columns=shape[1] 
-
+    outliers=[]
     for col in range(columns):
         mean = np.mean(data.iloc[:,col])
         std = np.std(data.iloc[:,col])
         for row in range(rows):
             z_score = (data.iloc[row,col]-mean)/std
             if np.abs(z_score)>threshold:
-                dataset = dataset.drop(data.index[row])
-                break
-            
+                if row not in outliers:
+                	outliers.append(row)
+    dataset=dataset.drop(outliers)            
     dataset.to_csv(outcsv_filename, index=False)
     print ('The no of rows removed:',len(data) - len(dataset))
 
