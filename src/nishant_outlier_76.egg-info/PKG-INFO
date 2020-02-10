@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: nishant-outlier-76
+Version: 0.0.1
+Summary: Outlier Removal Using Z-score
+Home-page: https://github.com/nishu195/nishant_outlier_76
+Author: Nishant Goel
+Author-email: ngoel_be17@thapar.edu
+License: UNKNOWN
+Description: # Library for removing outliers from pandas dataframe
+        
+        ```
+        PROJECT 2, UCS633 - Data Analysis and Visualization
+        Nishant Goel  
+        COE17
+        Roll number: 101703376
+        ```
+        Takes two inputs - filename of input csv, intended filename of output csv.
+        Third optional argument is threshold, by default it's 1.5.
+        Output is the number of rows removed from the input dataset. Resulting csv is saved as output.csv. 
+        
+        
+        ## Installation
+        `pip install nishant_outlier_76`
+        
+        *Recommended - test in a virtual environment.* 
+        
+        ## Use via command line
+        `outliers_cli in.csv out.csv`
+        
+        First argument after outcli is the input csv filename from which the dataset is extracted. The second argument is for storing the final dataset after processing.
+        
+        ## Use in .py script
+        ```
+        from outliers_navkiran import remove_outliers
+        remove_outliers('input.csv', 'output.csv')
+        ```
+        
+        
+Keywords: command-line,Outliers,outlier-removal,row-removal
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
