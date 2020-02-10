@@ -3,14 +3,17 @@ import numpy as np
 
 def remove_outliers(incsv_filename, outcsv_filename,threshold):
 
-    dataset = pd.read_csv(incsv_filename)	
-    data = dataset.iloc[:,1:]  
+    dataset = pd.read_csv(incsv_filename)
+    data = dataset.iloc[:,1:]
+    shape=np.shape(data)
+    rows=shape[0]
+    columns=shape[1] 
 
-    for i, row in data.iterrows():
-        mean = np.mean(row)
-        std = np.std(row)
-        for value in row:
-            z_score = (value-mean)/std
+    for col in range(columns):
+        mean = np.mean(data.iloc[:,col])
+        std = np.std(data.iloc[:,col])
+        for row in range(rows):
+            z_score = (data.iloc[row,col]-mean)/std
             if np.abs(z_score)>threshold:
                 dataset = dataset.drop(data.index[i])
                 break
