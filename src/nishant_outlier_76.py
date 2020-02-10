@@ -15,7 +15,7 @@ def remove_outliers(incsv_filename, outcsv_filename,threshold):
         for row in range(rows):
             z_score = (data.iloc[row,col]-mean)/std
             if np.abs(z_score)>threshold:
-                dataset = dataset.drop(data.index[i])
+                dataset = dataset.drop(data.index[row])
                 break
             
     dataset.to_csv(outcsv_filename, index=False)
