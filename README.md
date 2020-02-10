@@ -18,8 +18,10 @@ Output is the number of rows removed from the input dataset in case of z-score
 *Recommended - test in a virtual environment.* 
 
 ## Use via command line
-`outliers_cli in.csv out.csv`
-`outliers_cli in.csv out.csv 1.5`
+```
+outliers_cli in.csv out.csv
+outliers_cli in.csv out.csv 1.5
+```
 
 First argument after outcli is the input csv filename from which the dataset is extracted. The second argument is for storing the final dataset after processing.
 
