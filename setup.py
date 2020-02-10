@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="nishant_outlier_76", 
-    version="0.0.1",
+    version="0.0.2",
     author="Nishant Goel",
     author_email="ngoel_be17@thapar.edu",
-    description="Outlier Removal Using Z-score",
+    description="Outlier Removal Using Z-score or IQR",
     url="https://github.com/nishu195/nishant_outlier_76",
     long_description=long_description,
     long_description_content_type="text/markdown",
