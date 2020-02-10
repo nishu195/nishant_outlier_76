@@ -7,8 +7,8 @@ COE17
 Roll number: 101703376
 ```
 Takes two inputs - filename of input csv, intended filename of output csv.
-Third optional argument is threshold, by default it's 1.5.
-Output is the number of rows removed from the input dataset. Resulting csv is saved as output.csv. 
+
+Output is the number of rows removed from the input dataset.It also shows new dataset 
 
 
 ## Installation
